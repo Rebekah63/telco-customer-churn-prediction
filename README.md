@@ -13,7 +13,7 @@ End-to-end customer churn prediction using Random Forest from EDA and class imba
 
 ##  Problem Statement
 
-In the telecommunications industry, customer churn — the rate at which customers stop doing business with a company — is one of the most critical metrics to manage. Acquiring a new customer costs **5–10x more** than retaining an existing one.
+In the telecommunications industry, customer churn , the rate at which customers stop doing business with a company ,is one of the most critical metrics to manage. Acquiring a new customer costs **5–10x more** than retaining an existing one.
 
 This project builds a machine learning pipeline to **predict which customers are likely to churn**, enabling the business to intervene with targeted retention strategies before it's too late.
 
