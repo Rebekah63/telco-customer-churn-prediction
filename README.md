@@ -40,12 +40,12 @@ This project builds a machine learning pipeline to **predict which customers are
 
 ##  Key Findings (EDA)
 
-- **26.5% churn rate** — significant class imbalance requiring special handling
-- **Tenure is right-skewed** — most customers are newer, and newer customers churn most
+- **26.5% churn rate** - significant class imbalance requiring special handling
+- **Tenure is right-skewed** - most customers are newer, and newer customers churn most
 - **Month-to-month contract** holders churn at ~3x the rate of two-year contract holders
 - **No Online Security / No Tech Support** customers churn significantly more
 - **Electronic check** users have the highest churn rate among all payment methods
-- **Fiber optic** internet customers churn more — possibly due to unmet value expectations
+- **Fiber optic** internet customers churn more , possibly due to unmet value expectations
 - Strong correlations: Tenure ↔ TotalCharges (0.83), MonthlyCharges ↔ TotalCharges (0.65)
 
 ---
@@ -58,6 +58,7 @@ Raw Data → Cleaning → EDA → Preprocessing → SMOTE → Model Training →
 
 ### Data Preparation
 - Dropped `CustomerID` (non-predictive identifier)
+- checked for duplicates, missing values & inconsistencies
 - Converted `TotalCharges` from object → float; imputed 11 missing values with `0` (new customers)
 - Label-encoded target variable (`Churn`: Yes=1, No=0)
 
@@ -94,7 +95,7 @@ Best Parameters: {
 
 ## Results
 
-### Tuned Random Forest — Test Set Performance
+### Tuned Random Forest ( Test Set Performance)
 
 | Metric | No Churn | Churn |
 |--------|----------|-------|
@@ -111,11 +112,11 @@ Best Parameters: {
 | False Negatives (Churners missed) | 160 | **104** | -56 ↓ |
 | Churn Recall | 57% | **72%** | +15% ↑ |
 
-> **Optimising for recall** was the deliberate choice — in retention scenarios, missing a churner (false negative) costs far more than a mistaken intervention (false positive).
+> **Optimising for recall** was the deliberate choice , in retention scenarios, missing a churner (false negative) costs far more than a mistaken intervention (false positive).
 
 ---
 
-## 🏆 Top 10 Feature Importances
+##  Top 10 Feature Importances
 
 | Rank | Feature | Importance |
 |------|---------|-----------|
@@ -132,7 +133,7 @@ Best Parameters: {
 
 ---
 
-## 💡 Retention Strategy Recommendations
+##  Retention Strategy Recommendations
 
 Based on feature importance, the following interventions are recommended:
 
@@ -146,7 +147,7 @@ Based on feature importance, the following interventions are recommended:
 
 ---
 
-## 🗂️ Project Structure
+##  Project Structure
 
 ```
 telco-churn-prediction/
@@ -169,7 +170,7 @@ telco-churn-prediction/
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 **1. Clone the repository**
 ```bash
@@ -219,7 +220,7 @@ input_data = {
 
 ---
 
-## 📦 Requirements
+##  Requirements
 
 ```
 pandas
@@ -234,7 +235,7 @@ jupyter
 
 ---
 
-## 🔮 Next Steps
+##  Next Steps
 
 - [ ] Deploy model as a REST API (Flask / FastAPI)
 - [ ] Build interactive  dashboard for real-time churn scoring
